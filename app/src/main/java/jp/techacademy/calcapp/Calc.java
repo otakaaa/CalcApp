@@ -3,7 +3,6 @@ package jp.techacademy.calcapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -61,23 +60,20 @@ public class Calc extends AppCompatActivity implements View.OnClickListener {
             Log.d("debug", String.valueOf(mt + nt));
             intent.putExtra("VALUE", mt+nt);
 
-            startActivity(intent);
         } else if (v == this.button2){
             Log.d("debug",String.valueOf(mt - nt));
             intent.putExtra("VALUE", mt-nt);
 
-            startActivity(intent);
         } else if (v == this.button3){
             Log.d("debug",String.valueOf(mt * nt));
             intent.putExtra("VALUE", mt*nt);
 
-            startActivity(intent);
         } else if (v == this.button4){
             Log.d("debug",String.valueOf(mt / nt));
             intent.putExtra("VALUE", mt/nt);
 
-            startActivity(intent);
         }
-        
+        startActivity(intent);
+
     }
 }
