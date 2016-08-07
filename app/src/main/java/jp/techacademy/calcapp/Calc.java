@@ -56,7 +56,7 @@ public class Calc extends AppCompatActivity implements View.OnClickListener {
         String num2 = nEditText.getText().toString().trim();
         String message = "数値を入力してください";
 
-        if (TextUtils.isEmpty(num1) && TextUtils.isEmpty(num2)){
+        if (TextUtils.isEmpty(num1) || TextUtils.isEmpty(num2)){
             Toast.makeText(getApplicationContext(),message,Toast.LENGTH_SHORT).show();
             return;
         }
